@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Introduction_to_Programming"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/12san/AppData/Local/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/Users/12san/AppData/Local/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/12san/AppData/Local/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/12san/AppData/Local/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Introduction_to_Programming">
+				<Option output="C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug/Introduction_to_Programming.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/12san/AppData/Local/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Users/12san/AppData/Local/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Users/12san/AppData/Local/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Users/12san/AppData/Local/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Users/12san/AppData/Local/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 Introduction_to_Programming"/>
+					<CompileFile command="C:/Users/12san/AppData/Local/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/12san/AppData/Local/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/12san/AppData/Local/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Introduction_to_Programming/fast">
+				<Option output="C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug/Introduction_to_Programming.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/12san/AppData/Local/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Users/12san/AppData/Local/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Users/12san/AppData/Local/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Users/12san/AppData/Local/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Users/12san/AppData/Local/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 Introduction_to_Programming/fast"/>
+					<CompileFile command="C:/Users/12san/AppData/Local/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/12san/AppData/Local/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/12san/AppData/Local/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/12san/AppData/Local/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/Users/12san/AppData/Local/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/12san/AppData/Local/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/12san/AppData/Local/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Users/12san/AppData/Local/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/Users/12san/AppData/Local/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/12san/AppData/Local/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/12san/AppData/Local/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/01 ABC pattern.c">
+			<Option target="Introduction_to_Programming"/>
+		</Unit>
+		<Unit filename="C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/02 C PROGRAM OF FACTORIAL OF A NUMBER.CPP">
+			<Option target="Introduction_to_Programming"/>
+		</Unit>
+		<Unit filename="C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/89 write a Program in C to create a file.c">
+			<Option target="Introduction_to_Programming"/>
+		</Unit>
+		<Unit filename="C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/90 write a program in C to create a union inside a structure.c">
+			<Option target="Introduction_to_Programming"/>
+		</Unit>
+		<Unit filename="C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/93 Write a program in c to concantinate four stings together using string function.c">
+			<Option target="Introduction_to_Programming"/>
+		</Unit>
+		<Unit filename="C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/94 Write a program in c to demonstrate bubble sorting.c">
+			<Option target="Introduction_to_Programming"/>
+		</Unit>
+		<Unit filename="C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/95 Write a program in c to manually calculate the length of a string.c">
+			<Option target="Introduction_to_Programming"/>
+		</Unit>
+		<Unit filename="C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/main.c">
+			<Option target="Introduction_to_Programming"/>
+		</Unit>
+		<Unit filename="C:/Users/12san/OneDrive/Documents/GitHub/Introduction-to-Programming/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -7,6 +7,7 @@ int length=0;
 printf("Enter a string: \n");
 scanf("%s",str);
 for(int i=0; str[i]!='\0'; i++)
+
 {
 length++;
 }

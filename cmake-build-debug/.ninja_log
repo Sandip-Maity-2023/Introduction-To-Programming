@@ -1,0 +1,7 @@
+# ninja log v5
+1	116	7227298790072344	CMakeFiles/Introduction_to_Programming.dir/main.c.obj	e88985f555ebcd35
+127	264	7227298791493310	Introduction_to_Programming.exe	bd664aaa0419edd4
+5	128	7227299123521321	CMakeFiles/Introduction_to_Programming.dir/95_Write_a_program_in_c_to_manually_calculate_the_length_of_a_string.c.obj	801f6c0e7980658
+4	125	7227301643405589	CMakeFiles/Introduction_to_Programming.dir/93_Write_a_program_in_c_to_concantinate_four_stings_together_using_string_function.c.obj	de10ca4a4764d063
+4	113	7227299654731638	CMakeFiles/Introduction_to_Programming.dir/94_Write_a_program_in_c_to_demonstrate_bubble_sorting.c.obj	6d3f2c3b37f99a72
+4	117	7227300401531840	CMakeFiles/Introduction_to_Programming.dir/01_ABC_pattern.c.obj	80645ac5ffb040a0
