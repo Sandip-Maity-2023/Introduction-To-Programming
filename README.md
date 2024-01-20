@@ -6,7 +6,7 @@
 
 <h3> 👨🏻‍💻 About Me </h3>
 
-- 🔭 &nbsp; I’m pursuing B.Tech Computer science & Engineering 1st year
+- 🔭 &nbsp; I’m pursuing B.Tech Computer science & Engineering.
 - 🤔 &nbsp; Exploring new technologies and developing software solutions and quick hacks.
 - 🎓 &nbsp; Studying Computer Science, computer programming and Mathematics.
 - 💼 &nbsp; Android developer and front-end web developer.
