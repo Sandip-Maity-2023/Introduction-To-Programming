@@ -1,6 +1,3 @@
-# INTRODUCTION TO PROGRAMMING 
-# CODING-DECODING
-# <html><head>heading</head><body><h1>sandip maity</h1><h2>c programs of 1st semester in lab copy</h2><h3>...............by a student</h3></body></html>
 <h2> Hey there! I'm sandip. <img src="https://github.com/souvikguria98/souvikguria98/blob/master/Hi.gif" width="25"></h2>
 <img align="right" alt="GIF" src="https://raw.githubusercontent.com/devSouvik/devSouvik/master/gif3.gif" width="500"/>
 
