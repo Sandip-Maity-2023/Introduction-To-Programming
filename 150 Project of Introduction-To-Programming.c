@@ -1,12 +1,13 @@
 #include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
-#include<ourheaderfile.h>
+#include"ourheaderfile.h"
 int main(){
-    int x,y;
-    int addition;
-    printf("Enter two number:");
-    scanf("%d",&x &y);
-    printf("%d",addition(x,y));
+    int a,b;
+    printf("Enter two number:\n");
+    scanf("%d %d",&a, &b);
+    printf("Addition is: %d\n",sum(a,b));
+    printf("Substraction is: %d\n",sum(a,b));
+    printf("Multiplication is: %d\n",sum(a,b));
+    printf("Division is: %d\n",sum(a,b));
+    printf("Modulus is: %d\n",sum(a,b));
     return 0;
 }
