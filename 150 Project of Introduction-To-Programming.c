@@ -1,9 +1,14 @@
 #include<stdio.h>
 #include"ourheaderfile.h"
 int main(){
-    int a,b,z,x,y,num;
-    printf("Choose the option :\t1.Armstrong number\t2.Area of a square\t3.Radius of a circle\t4.ASCII value\t5.calculation:\n");
+    int a,b,z,x,y,num,n;
+    while(1){
+    printf("Choose the option :\t1.Armstrong number\t2.Area of a square\t3.Sum of N numbers\t4.Radius of a circle\t5.ASCII value\t6.calculation:\t7.exit\n");
     scanf("%d",&z);
+    if(z==7){
+        printf("thank you for your time.");
+        break;
+            }
     switch(z){
         case 1:
         printf("Enter number to check Armstrong numbers:");
@@ -23,8 +28,14 @@ int main(){
     printf("Division is: %d\n",sum(a,b));
     printf("Modulus is: %d\n",sum(a,b));
     break;
- default:
+    case 3:
+    printf("Enter the number:");
+    scanf("%d",&n);
+    printf("The sum of the first %d natural numbers is %d\n",n,SumOfNaturalNumbers(n));
+    break;
+    default:
         printf("Sorry unavailable.....");
-        break;
+        continue;
+}
 }
 }
