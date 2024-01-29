@@ -24,12 +24,12 @@ int armstrong(int num){
         sum=sum+power;
         n=n/10;
     }
-    if(sum=num)
-      return 0;
-    else
-      return 1;
+    if(sum==num) {
+        return 0;
+    }  else{
+      return 1;}
 }
-int SumOfNaturalNumbers(int n){
+int SumOfNaturalNumbers(int n) {
     if(n==0){
         return 0;
     }else{
