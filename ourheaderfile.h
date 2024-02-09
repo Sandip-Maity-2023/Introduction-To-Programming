@@ -36,3 +36,9 @@ int SumOfNaturalNumbers(int n) {
         return n+SumOfNaturalNumbers(n-1);
     }
 }
+float SgpaToPercentage(float sgpa){
+    return (sgpa-0.75)*10.0;
+}
+float PercentageToSgpa(float percentage){
+    return (percentage/10.0)+0.75;
+}
