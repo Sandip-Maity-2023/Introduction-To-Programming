@@ -1,28 +1,29 @@
+//
+// Created by 12san on 10-02-2024.
+//
 #include<stdio.h>
-#include<stdlib.h>
 #include"ourheaderfile.h"
 
-int AreaOfCircle(int k);
-
 int main() {
-    int a, b,choice, x, y, num, n, r, k = 0, rows, cols, elements;
+    printf("....................SOFTWARE OF PROGRAMS...........................");
+    int a, b,d, z, x, num, n, r, rows, cols, choice,option,o,q;
 #define MAX_ROWS 10
+#define MAX_COLS 10
     int matrix[MAX_ROWS][MAX_COLS], transpose[MAX_COLS][MAX_ROWS];
     char c;
-    float ru,percentage,sgpa;
-#define MAX_COLS 10
+    float ru, sgpa, percentage;
     while (1) {
-        printf("\nChoose the option:\n");
+        printf("Choose the option:\n");
         printf("1.exit\n");
         printf("2.Armstrong number\n");
         printf("3.calculation of two number\n");
         printf("4.Sum of N numbers\n");
-        printf("5.Radius of a circle\n");
+        printf("5.Area of a circle\n");
         printf("6.ASCII value\n");
-        printf("7.Currency converter into Dollars,Euros,Yen,Rubel\n");
+        printf("7.Currency converter into Dollars,Euros,Yen,Rubel.\n");
         printf("8.Transpose of Matrix calculation\n");
-        printf("9.SGPA to percentage and reverse\n");
-        printf("10.\n");
+        printf("9.SGPA to percentage\n");
+        printf("10.Pattern\n");
         scanf("%d", &choice);
         if (choice == 1) {
             printf("thank you for your time.");
@@ -86,6 +87,7 @@ int main() {
                         scanf("%d", &matrix[i][j]);
                     }
                 }
+
                 // Printing the original matrix
                 printf("\nOriginal Matrix:\n");
                 for (int i = 0; i < rows; i++) {
@@ -94,12 +96,14 @@ int main() {
                     }
                     printf("\n");
                 }
+
                 // Finding the transpose of the matrix
                 for (int i = 0; i < cols; i++) {
                     for (int j = 0; j < rows; j++) {
                         transpose[i][j] = matrix[j][i];
                     }
                 }
+
                 // Printing the transpose of the matrix
                 printf("\nTranspose of Matrix:\n");
                 for (int i = 0; i < cols; i++) {
@@ -108,28 +112,63 @@ int main() {
                     }
                     printf("\n");
                 }
+
                 return 0;
-        break;
-        case 9:
-            printf("1.SGPA to Percentage\n");
-            printf("2.Percentage to SGPA\n");
-            printf("Select the option:\n");
-            scanf("%d",&c);
-        if(c=1) {
-            printf("Enter your SGPA:");
-            scanf("%f", &sgpa);
-            percentage = SgpaToPercentage(sgpa);
-            printf("%.2f", percentage);
-        }else {
-            printf("Enter your Percentage:\n");
-            scanf("%.2f", &percentage);
-            sgpa = PercentageToSgpa(percentage);
-            printf("SGPA=%.2f", sgpa);
-        }
-        break;
-        default:
-            printf("Sorry unavailable.....");
-            break;
+                break;
+            case 9:
+                printf("1.SGPA to Percentage\n");
+                printf("2.Percentage to SGPA\n");
+                printf("Select your option:\n");
+                scanf("%d",&option);
+                if(option==1) {
+                    // Convert SGPA to percentage
+                    printf("Enter SGPA: ");
+                    scanf("%f", &sgpa);
+                    percentage = SgpaToPercentage(sgpa);
+                    printf("Percentage: %.2f%%\n", percentage);
+                }else {
+                    // Convert percentage to SGPA
+                    printf("\nEnter Percentage: ");
+                    scanf("%f", &percentage);
+                    sgpa = PercentageToSgpa(percentage);
+                    printf("SGPA: %.2f\n", sgpa);
+                }
+                break;
+            case 10:
+                printf("1.Pattern of numbers\n");
+                printf("2.pattern of stars\n");
+                printf("Select the option:");
+                scanf("%d",&o);
+                if(o==1){
+                    printf("pattern of numbers\n");
+                    printf("choose the option:\n");
+                    scanf("%d",&q);
+                    printf("1.Fibonacci series\n");
+                    printf("2.triangle\n");
+                    printf("3.Floid's triangle\n");
+                    printf("4.Arithmetic Sequence\n");
+                    printf("5.Geometric sequence\n");
+                    printf("6.square number sequence\n");
+                    printf("7.Harmonic sequence\n");
+                    printf("8.Cube number sequence\n");
+                    switch(q){
+                        case 1:
+                            printf("Enter number:\n");
+                            scanf("%d",&d);
+                                        printf("Enter the number of terms for Fibonacci Series: ");
+                                        scanf("%d", &n);
+                                        generateFibonacciSeries(n);
+                                        break;
+                                    default:
+                                        printf("Invalid choice\n");
+                                }
+                } else {
+                    printf("pattern of stars\n");
+                }
+                break;
+            default:
+                printf("Sorry unavailable.....");
+                break;
         }
     }
 }

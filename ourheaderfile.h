@@ -13,6 +13,7 @@ int divide(int x,int y){
 int mod(int x,int y){
     return x%y;
 }
+
 int armstrong(int num){
     int lastdigit=0;
     int sum=0;
@@ -29,6 +30,7 @@ int armstrong(int num){
     }  else{
       return 1;}
 }
+
 int SumOfNaturalNumbers(int n) {
     if(n==0){
         return 0;
@@ -36,9 +38,40 @@ int SumOfNaturalNumbers(int n) {
         return n+SumOfNaturalNumbers(n-1);
     }
 }
+
 float SgpaToPercentage(float sgpa){
     return (sgpa-0.75)*10.0;
 }
 float PercentageToSgpa(float percentage){
     return (percentage/10.0)+0.75;
+}
+
+int AreaOfCircle(int k);
+
+// Function to generate Fibonacci series
+void generateFibonacciSeries(int n) {
+    int i, firstTerm = 0, secondTerm = 1, nextTerm;
+        for (i = 1; i <= n; ++i) {
+        // Prints the first two terms.
+        if (i == 1) {
+            printf("%d, ", firstTerm);
+            continue;
+        }
+        if (i == 2) {
+            printf("%d, ", secondTerm);
+            continue;
+        }
+        // Computes the next term in the series.
+        nextTerm = firstTerm + secondTerm;
+        firstTerm = secondTerm;
+        secondTerm = nextTerm;
+
+        printf("%d", nextTerm);
+
+        // Adds comma and space if it's not the last term.
+        if (i != n) {
+            printf(", ");
+        }
+    }
+    printf("\n");
 }
