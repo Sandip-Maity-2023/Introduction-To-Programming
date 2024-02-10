@@ -75,3 +75,53 @@ void generateFibonacciSeries(int n) {
     }
     printf("\n");
 }
+void generateTriangularSequence1(int n){
+    for(int i=0;i<=n;i++){
+        for(int j=0;j<=i;j++){
+            printf("%d",i);
+        }
+        printf("\n");
+    }
+}
+
+void generateTriangularSequence2(int n) {
+    for (int i = 0; i <= n; i++) {
+        for (int j = 0; j <= i; j++) {
+            printf("%d", j);
+        }
+        printf("\n");
+    }
+}
+
+void printFloydsTriangle(int rows) {
+    int number = 1, i, j;
+
+    printf("Floyd's Triangle:\n");
+
+    for (i = 1; i <= rows; i++) {
+        for (j = 1; j <= i; j++) {
+            printf("%d ", number);
+            number++;
+        }
+        printf("\n");
+    }
+}
+
+void generateTriangleShape(int rows){
+    for(int i=1;i<=rows;i++){
+        for(int j=1;j<=i;j++){
+            printf("* ");
+        }
+        printf("\n");
+    }
+}
+
+float cgpa;
+float calculateCGPA(float Sgpa[], int n) {
+float sum = 0;
+for (int i = 0; i < n; i++) {
+sum += Sgpa[i];
+}
+cgpa = sum / n;
+return cgpa;
+}
