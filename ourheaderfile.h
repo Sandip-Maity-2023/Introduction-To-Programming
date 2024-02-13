@@ -125,3 +125,13 @@ sum += Sgpa[i];
 cgpa = sum / n;
 return cgpa;
 }
+
+
+int percentile_to_rank_conversion(int total,float p) {
+    int rank = total * (100 - p) / 100;
+    return rank;
+}
+
+float convert_rank_to_percentile(float rank,float total) {
+    return ((total-rank)/total)*100;
+}

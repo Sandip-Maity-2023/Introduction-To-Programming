@@ -6,13 +6,14 @@
 
 int main() {
     printf(".............................SOFTWARE OF PROGRAMS......................................\n");
-    int a,b,x, num, n,m, r, rows,cols, choice,option,o,q;
+    int a,b,x, num, n,m, r, rows,cols, choice,option,o,q,total,rank;
+    double total_candidates_below,total_candidates;
 
 #define MAX_ROWS 10
 #define MAX_COLS 10
     int matrix[MAX_ROWS][MAX_COLS], transpose[MAX_COLS][MAX_ROWS];
     char c;
-    float ru, sgpa, percentage,Sgpa[20];
+    float ru,p, sgpa, percentage,Sgpa[20];
     while (1) {
         printf("Choose the option:\n");
         printf("1.exit\t\t");
@@ -26,7 +27,9 @@ int main() {
         printf("9.SGPA to CGPA\t\t");
         printf("10.SGPA to Percentage and Reverse\t\t");
         printf("11.Pattern\t\t");
-        printf("12.Factorial of a number\n\n");
+        printf("12.Rank to Percentile conversion\n\n");
+        printf("13.percentile to rank calculation\n");
+        printf("14. Information\n");
         scanf("%d", &choice);
         if (choice == 1) {
             printf("thank you for your time.");
@@ -204,6 +207,52 @@ int main() {
                             generateTriangleShape(rows);
                     }
                 }
+                break;
+            case 12:
+                    printf("Enter the rank: ");
+                    scanf("%d", &rank);
+
+                    printf("Enter the total number of students appeared: ");
+                    scanf("%d", &total);
+
+                    float percentile = convert_rank_to_percentile(rank, total);
+
+                    printf("The percentile corresponding to rank %.1f is: %.2f\n", rank,percentile);
+                break;
+            case 13:
+                    printf("Enter total number of students who have given exam:");
+                    scanf("%d",&total);
+                    printf("Enter your percentile:\n");
+                    scanf("%f",&p);
+                    int rank=percentile_to_rank_conversion(total,p);
+                    printf("Your rank is :%d",rank);
+                break;
+            case 14:
+                printf("\"Total Rank =total number of students who have been given exam ×(100- your percentile)/100\n"
+                       "For example if your percentile is 98 then you are lying between in top 2 percent student means what ?\n"
+                       "It means that less than 98 percent student are of behind you."
+                       "If you want to calculate percentile rank then there is another method."
+
+                       "As you know that there are 8 slot for JEE mains exam and 30000 student have seated in one slot then your\n"
+                       "\n"
+                       "Percentile rank =no. Of candidates behind you/total number of students who have given the exam× 100.\n"
+                       "\n"
+                       "For example if we assure that your percentile rank is 27001 then\n"
+                       "\n"
+                       "No. Of candidates behind you is 27000 and total number of students who have given the exam on that slot is 30000 then your percentile will be =\n"
+                       "\n"
+                       "27000/30000×1000\n"
+                       "=90 percentile. */");
+                printf("              /*For example: If in an examination a student’s percentile is 75 then it means that the student has scored more than 75% of students who took the test. \n"
+                       " \n"
+                       "Now, in order to calculate percentile we have the following formula:\n"
+                       "PERCENTILE = (NUMBER OF STUDENTS WHO SCORED BELOW OR EQUAL TO THE DESIRED STUDENT/ TOTAL NUMBER OF STUDENTS – 1) * 100 \n"
+                       "P = (n/N) × 100\n"
+                       "n = ordinal rank of the given value or value below the number.\n"
+                       "N = number of values in the data set.\n"
+                       "P = percentile.\n"
+                       "\n"
+                       "*/");
                 break;
             default:
                 printf("Sorry unavailable.....");
