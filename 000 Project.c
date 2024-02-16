@@ -2,34 +2,36 @@
 // Created by 12san on 10-02-2024.
 //
 #include<stdio.h>
+#include<string.h>
 #include"ourheaderfile.h"
 
 int main() {
     printf(".............................SOFTWARE OF PROGRAMS......................................\n");
-    int a,b,x, num, n,m, r, rows,cols, choice,option,o,q,total,rank;
-    double total_candidates_below,total_candidates;
+    int a, b, x, j, num, number, n, m, r, rows, cols, choice, option, o, q, total, rank;
+    double total_candidates_below, total_candidates;
 
 #define MAX_ROWS 10
 #define MAX_COLS 10
     int matrix[MAX_ROWS][MAX_COLS], transpose[MAX_COLS][MAX_ROWS];
-    char c;
-    float ru,p, sgpa, percentage,Sgpa[20];
+    char c, roman[10];
+    float ru, p, sgpa, percentage, Sgpa[20];
     while (1) {
-        printf("Choose the option:\n");
-        printf("1.exit\t\t");
-        printf("2.Armstrong number\t\t");
-        printf("3.calculation of two number\t\t");
-        printf("4.Sum of N numbers\n\n");
-        printf("5.Area of a circle\t\t");
-        printf("6.ASCII value\t\t");
-        printf("7.Currency converter into Dollars,Euros,Yen,Rubel.\t\t");
-        printf("8.Transpose of Matrix calculation\n\n");
-        printf("9.SGPA to CGPA\t\t");
-        printf("10.SGPA to Percentage and Reverse\t\t");
-        printf("11.Pattern\t\t");
-        printf("12.Rank to Percentile conversion\n\n");
+        printf("1.exit\n");
+        printf("2.Armstrong number\n");
+        printf("3.calculation of two number\n");
+        printf("4.Sum of N numbers\n");
+        printf("5.Area of a circle\n");
+        printf("6.ASCII value\n");
+        printf("7.Currency converter into Dollars,Euros,Yen,Rubel.\n");
+        printf("8.Transpose of Matrix calculation\n");
+        printf("9.SGPA to CGPA\n");
+        printf("10.SGPA to Percentage and Reverse\n");
+        printf("11.Pattern\n");
+        printf("12.Rank to Percentile conversion\n");
         printf("13.percentile to rank calculation\n");
-        printf("14. Information\n");
+        printf("14.Information\n");
+        printf("15.Roman number to Integer and the Reverse\n");
+        printf("Choose the option:\n");
         scanf("%d", &choice);
         if (choice == 1) {
             printf("thank you for your time.");
@@ -122,30 +124,30 @@ int main() {
                 return 0;
                 break;
             case 9:
-                    printf("Enter the number of semesters: ");
-                    scanf("%d", &n);
+                printf("Enter the number of semesters: ");
+                scanf("%d", &n);
 
-                    printf("Enter SGPA for each semester:\n");
-                    for (int i = 0; i < n; i++) {
-                        printf("Enter SGPA for Semester %d: ", i + 1);
-                        scanf("%f", &Sgpa[i]);
-                    }
-                    cgpa = calculateCGPA(Sgpa,n);
+                printf("Enter SGPA for each semester:\n");
+                for (int i = 0; i < n; i++) {
+                    printf("Enter SGPA for Semester %d: ", i + 1);
+                    scanf("%f", &Sgpa[i]);
+                }
+                cgpa = calculateCGPA(Sgpa, n);
 
-                    printf("CGPA = %.2f\n", cgpa);
+                printf("CGPA = %.2f\n", cgpa);
                 break;
             case 10:
                 printf("1.SGPA to Percentage\n");
                 printf("2.Percentage to SGPA\n");
                 printf("Select your option:\n");
-                scanf("%d",&option);
-                if(option==1) {
+                scanf("%d", &option);
+                if (option == 1) {
                     // Convert SGPA to percentage
                     printf("Enter SGPA: ");
                     scanf("%f", &sgpa);
                     percentage = SgpaToPercentage(sgpa);
                     printf("Percentage: %.2f%%\n", percentage);
-                }else {
+                } else {
                     // Convert percentage to SGPA
                     printf("\nEnter Percentage: ");
                     scanf("%f", &percentage);
@@ -157,8 +159,8 @@ int main() {
                 printf("1.Pattern of numbers\n");
                 printf("2.pattern of stars\n");
                 printf("Select the option:");
-                scanf("%d",&o);
-                if(o==1){
+                scanf("%d", &o);
+                if (o == 1) {
                     printf("pattern of numbers\n");
                     printf("1.Fibonacci series\n");
                     printf("2.triangle\n");
@@ -169,19 +171,19 @@ int main() {
                     printf("7.Harmonic sequence\n");
                     printf("8.Cube number sequence\n");
                     printf("choose the option:\n");
-                    scanf("%d",&q);
-                    switch(q){
+                    scanf("%d", &q);
+                    switch (q) {
                         case 1:
                             printf("Enter the number of terms for Fibonacci Series: ");
                             scanf("%d", &n);
                             generateFibonacciSeries(n);
                             break;
                         case 2:
-                                printf("enter the value of n:");
-                                scanf("%d",&n);
-                                generateTriangularSequence1(n);
-                                generateTriangularSequence2(n);
-                                break;
+                            printf("enter the value of n:");
+                            scanf("%d", &n);
+                            generateTriangularSequence1(n);
+                            generateTriangularSequence2(n);
+                            break;
                         case 3:
                             printf("Floyd's Triangle");
                             printf("Enter the number of rows: ");
@@ -191,41 +193,41 @@ int main() {
                         case 4:
                             break;
                         default:
-                                printf("Invalid choice\n");
+                            printf("Invalid choice\n");
                     }
                 } else {
                     printf("pattern of stars\n");
                     printf("1.Triangle shape\n");
                     printf("2.Fibonacci series\n");
                     printf("Choose the option:\n");
-                    scanf("%d",&o);
-                    switch(o){
+                    scanf("%d", &o);
+                    switch (o) {
                         case 1:
                             printf("Triangle shape");
                             printf("enter the rows:");
-                            scanf("%d",&rows);
+                            scanf("%d", &rows);
                             generateTriangleShape(rows);
                     }
                 }
                 break;
             case 12:
-                    printf("Enter the rank: ");
-                    scanf("%d", &rank);
+                printf("Enter the rank: ");
+                scanf("%d", &rank);
 
-                    printf("Enter the total number of students appeared: ");
-                    scanf("%d", &total);
+                printf("Enter the total number of students appeared: ");
+                scanf("%d", &total);
 
-                    float percentile = convert_rank_to_percentile(rank, total);
+                float percentile = convert_rank_to_percentile(rank, total);
 
-                    printf("The percentile corresponding to rank %.1f is: %.2f\n", rank,percentile);
+                printf("The percentile corresponding to rank %.1f is: %.2f\n", rank, percentile);
                 break;
             case 13:
-                    printf("Enter total number of students who have given exam:");
-                    scanf("%d",&total);
-                    printf("Enter your percentile:\n");
-                    scanf("%f",&p);
-                    int rank=percentile_to_rank_conversion(total,p);
-                    printf("Your rank is :%d",rank);
+                printf("Enter total number of students who have given exam:");
+                scanf("%d", &total);
+                printf("Enter your percentile:\n");
+                scanf("%f", &p);
+                int rank = percentile_to_rank_conversion(total, p);
+                printf("Your rank is :%d", rank);
                 break;
             case 14:
                 printf("\"Total Rank =total number of students who have been given exam ×(100- your percentile)/100\n"
@@ -254,8 +256,38 @@ int main() {
                        "\n"
                        "*/");
                 break;
+            case 15:
+                printf("1.Roman number to Integer\t");
+                printf("2.Integer to Roman number\t");
+                printf("Choose the option:\n");
+                scanf("%d", &j);
+                switch (j) {
+                    case 1:
+                        printf("Enter a Roman numeral: ");
+                        scanf("%s", &roman);
+
+                        int integer = romanToInt(roman);
+
+                        if (integer >= 0) {
+                            printf("Integer equivalent: %d\n", integer);
+                        } else {
+                            printf("Invalid Roman numeral.\n");
+                        }
+                        break;
+                    case 2:
+                        printf("Enter an integer: ");
+                        scanf("%d", &num);
+
+                        printf("Roman numeral representation: ");
+                        integerToRoman(num);
+                        printf("\n");
+                        break;
+                        default:
+                puts("sorry unavailable\n");
+                break;
+        }
             default:
-                printf("Sorry unavailable.....");
+                printf("Sorry unavailable.....\n");
                 break;
         }
     }

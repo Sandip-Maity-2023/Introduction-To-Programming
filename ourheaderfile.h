@@ -135,3 +135,74 @@ int percentile_to_rank_conversion(int total,float p) {
 float convert_rank_to_percentile(float rank,float total) {
     return ((total-rank)/total)*100;
 }
+
+
+// Function to convert a single Roman numeral character to its value
+int romanCharToInt(char c) {
+    switch (c) {
+        case 'I': return 1;
+        case 'V': return 5;
+        case 'X': return 10;
+        case 'L': return 50;
+        case 'C': return 100;
+        case 'D': return 500;
+        case 'M': return 1000;
+        default: return -1; // Invalid character
+    }
+}
+
+// Function to convert a Roman numeral string to an integer
+int romanToInt(char *roman) {
+    int result = 0, prev = 0;
+    while (*roman) {
+        int current = romanCharToInt(*roman);
+        if (current < 0) {
+            return -1; // Invalid character
+        }
+        // Check for subtractive notation
+        if (current > prev) {
+            result = result - prev + current; // Subtract previous and add current
+        } else {
+            result += current; // Simply add current
+        }
+        prev = current;
+        roman++;
+    }
+    return result;
+}
+
+// Function to get the Roman numeral representation of a digit
+char* digitToRoman(int digit) {
+    switch (digit) {
+        case 1: return "I";
+        case 2: return "II";
+        case 3: return "III";
+        case 4: return "IV";
+        case 5: return "V";
+        case 6: return "VI";
+        case 7: return "VII";
+        case 8: return "VIII";
+        case 9: return "IX";
+        default: return ""; // Invalid digit
+    }
+}
+
+// Function to convert integer to Roman numeral
+void integerToRoman(int num) {
+    int decimalVals[] = { 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
+    const char *romanVals[] = { "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
+
+    // Iterate through decimalVals
+    for (int i = 0; num > 0; ++i) {
+        // Repeat while the current decimalVals[i] is less than or equal to num
+        while (num >= decimalVals[i]) {
+            printf("%s", romanVals[i]); // Print corresponding Roman numeral
+            num -= decimalVals[i]; // Subtract decimalVals[i] from num
+        }
+    }
+}
+
+
+
+
+
