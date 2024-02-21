@@ -11,6 +11,7 @@ void processDonation(char *name) {
     printf("Transaction Details\nAmount: ₹1\nStatus: Successful\n");
     printf("Thank you, %s, for your donation!\n", name);
     printf("You are now a donor of the donation fund that will help those in distress.\n");
+    
 }
 
 int main() {
@@ -24,6 +25,7 @@ int main() {
     // Prompt the user to enter their name
     printf("Enter your name: ");
     scanf(" %[^\n]s", name);
+
 
     // Validate the QR code (for simplicity, we skip validation in this example)
 
