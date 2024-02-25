@@ -202,6 +202,13 @@ void integerToRoman(int num) {
     }
 }
 
+int addition(int z){
+    int add=0;
+    for(int i=1;i<=z;i++){
+        add+=i;
+    }
+    return add;
+}
 
 
 

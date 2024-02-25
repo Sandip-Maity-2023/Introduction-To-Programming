@@ -7,7 +7,7 @@
 
 int main() {
     printf(".............................SOFTWARE OF PROGRAMS......................................\n");
-    int a, b, x, j, num, number, n, m, r, rows, cols, choice, option, o, q, total, rank;
+    int a, b, x, j, num,n,r, rows, cols, choice, option, o, q, total, rank,range,result;
     double total_candidates_below, total_candidates;
 
 #define MAX_ROWS 10
@@ -31,6 +31,7 @@ int main() {
         printf("13.percentile to rank calculation\n");
         printf("14.Information\n");
         printf("15.Roman number to Integer and the Reverse\n");
+        printf("16.Upto which number you want to find sum:\n");
         printf("Choose the option:\n");
         scanf("%d", &choice);
         if (choice == 1) {
@@ -282,10 +283,16 @@ int main() {
                         integerToRoman(num);
                         printf("\n");
                         break;
-                        default:
-                puts("sorry unavailable\n");
-                break;
-        }
+                    default:
+                        puts("sorry unavailable\n");
+                        break;
+                }
+                case 16:
+                        printf("Upto which number you want to find sum:\n");
+                        scanf("%d",&range);
+                        result=addition(range);
+                        printf("1+2+3+.....+%d+%d = %d\n",(range-1),range,result);
+                        break;
             default:
                 printf("Sorry unavailable.....\n");
                 break;
