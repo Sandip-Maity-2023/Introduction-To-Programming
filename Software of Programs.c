@@ -7,7 +7,7 @@
 
 int main() {
     printf(".............................SOFTWARE OF PROGRAMS......................................\n");
-    int a, b, x, j, num,n,r, rows, cols, choice, option, o, q, total, rank,range,result;
+    int a, b, x, j, num,n,r,year,rows,cols,choice,option,o,q,total, rank,range,result;
     double total_candidates_below, total_candidates;
 
 #define MAX_ROWS 10
@@ -32,6 +32,7 @@ int main() {
         printf("14.Information\n");
         printf("15.Roman number to Integer and the Reverse\n");
         printf("16.Upto which number you want to find sum:\n");
+        printf("17.Enter the year to check it is leap year or not\n");
         printf("Choose the option:\n");
         scanf("%d", &choice);
         if (choice == 1) {
@@ -293,6 +294,15 @@ int main() {
                         result=addition(range);
                         printf("1+2+3+.....+%d+%d = %d\n",(range-1),range,result);
                         break;
+            case 17:
+                printf("Enter the year:\n");
+                scanf("%d",&year);
+                if(Leapyear(year)){
+                    printf("%d is a leap year\n",year);
+                }else{
+                    printf("%d is not a leap year\n",year);
+                }
+                break;
             default:
                 printf("Sorry unavailable.....\n");
                 break;
