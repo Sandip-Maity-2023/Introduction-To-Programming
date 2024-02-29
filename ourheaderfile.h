@@ -218,6 +218,29 @@ return 0;
 }
 }
 
+int isArmstrongNumber(int num) {
+    int originalNum = num;
+    int sum = 0;
+    int numberOfDigits = 0;
+
+    // Count the number of digits
+    while (originalNum != 0) {
+        originalNum /= 10;
+        numberOfDigits++;
+    }
+    originalNum = num;
+    // Calculate the sum of each digit raised to the power of the number of digits
+    while (originalNum != 0) {
+        int digit = originalNum % 10;
+        sum += pow(digit, numberOfDigits);
+        originalNum /= 10;
+    }
+
+    // Return 1 if the number is an Armstrong number, otherwise return 0
+    return sum == num;
+}
+
+
 
 
 

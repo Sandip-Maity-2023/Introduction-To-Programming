@@ -3,6 +3,7 @@
 //
 #include<stdio.h>
 #include<string.h>
+#include<math.h>
 #include"ourheaderfile.h"
 
 int main() {
@@ -294,7 +295,7 @@ int main() {
                         result=addition(range);
                         printf("1+2+3+.....+%d+%d = %d\n",(range-1),range,result);
                         break;
-            case 17:
+                case 17:
                 printf("Enter the year:\n");
                 scanf("%d",&year);
                 if(Leapyear(year)){
@@ -302,6 +303,10 @@ int main() {
                 }else{
                     printf("%d is not a leap year\n",year);
                 }
+                break;
+            case 18:
+                printf("Enter the number to check amstrong number:\n");
+                scanf("%d",&a);
                 break;
             default:
                 printf("Sorry unavailable.....\n");
