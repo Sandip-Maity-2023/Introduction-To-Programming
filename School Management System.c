@@ -10,6 +10,7 @@
 // number of students
 int i = 0;
 
+
 // Structure to store the student
 struct sinfo {
     char fname[50];
@@ -22,7 +23,7 @@ struct sinfo {
 // Function to add the student
 void add_student()
 {
-
+    printf(".......................SCHOOL MANAGEMENT SYSTEM..........................");
     printf("Add the Students Details\n");
     printf("-------------------------\n");
     printf("Enter the first "
