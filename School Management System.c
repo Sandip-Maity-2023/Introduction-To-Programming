@@ -1,6 +1,7 @@
 // C program for the implementation of
-// menu driven program for student
-// management system
+//menu driven program for student
+//management system
+
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -12,7 +13,7 @@ int i = 0;
 
 
 // Structure to store the student
-struct sinfo {
+struct details {
     char fname[50];
     char lname[50];
     int roll;
