@@ -1,4 +1,4 @@
-//Write a c program to check whether 2 numbers are amicable or not.
+//Write a c program to check whether 2 numbers are amicable or not. 220 & 284, 1184 & 1210
 #include<stdio.h>
 int main()
 {
