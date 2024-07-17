@@ -1,3 +1,8 @@
+#include<math.h>
+#include<stdio.h>
+#include<stdbool.h>
+
+
 int sum(int x,int y){
     return x+y;
 }
@@ -14,21 +19,27 @@ int mod(int x,int y){
     return x%y;
 }
 
-int armstrong(int num){
-    int lastdigit=0;
-    int sum=0;
-    int power=0;
-    int n=num;
-    while(n!=0){
-        lastdigit=n%10;
-        power=lastdigit*lastdigit*lastdigit;
-        sum=sum+power;
-        n=n/10;
+// Function to check if a number is an Armstrong number
+int isArmstrong(int num) {
+    int original = num, remainder, result = 0, n = 0;
+
+    // Calculate the number of digits
+    while (original != 0) {
+        original /= 10;
+        ++n;
     }
-    if(sum==num) {
-        return 0;
-    }  else{
-      return 1;}
+
+    original = num;
+
+    // Calculate the sum of digits raised to the power of n
+    while (original != 0) {
+        remainder = original % 10;
+        result += pow(remainder, n);
+        original /= 10;
+    }
+
+    // Check if the result is equal to the original number
+    return (result == num);
 }
 
 int SumOfNaturalNumbers(int n) {
@@ -211,36 +222,25 @@ int addition(int z){
 }
 
 int Leapyear(int year){
-    if(year%4==0 && year%100!=0 || year%400==0){
-    return 1;
-}else{
-return 0;
-}
+    if(year%4==0 && year%100!=0 || year%400==0)
+       return 1;
+    else
+        return 0;
 }
 
-int isArmstrongNumber(int num) {
-    int originalNum = num;
-    int sum = 0;
-    int numberOfDigits = 0;
 
-    // Count the number of digits
-    while (originalNum != 0) {
-        originalNum /= 10;
-        numberOfDigits++;
+bool palindrome(int x){
+    int reverse=0,temp=x;
+    while(temp>0){
+        int rem=temp%10;
+        reverse=reverse*10+rem;
+        temp/=10;
     }
-    originalNum = num;
-    // Calculate the sum of each digit raised to the power of the number of digits
-    while (originalNum != 0) {
-        int digit = originalNum % 10;
-        sum += pow(digit, numberOfDigits);
-        originalNum /= 10;
-    }
-
-    // Return 1 if the number is an Armstrong number, otherwise return 0
-    return sum == num;
+    if(x==reverse)
+        return true;
+    else
+        return false;
 }
-
-
 
 
 

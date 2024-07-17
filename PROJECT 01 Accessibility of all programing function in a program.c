@@ -2,13 +2,11 @@
 // Created by 12san on 10-02-2024.
 //
 #include<stdio.h>
-#include<string.h>
-#include<math.h>
-#include"ourheaderfile.h"
+#include"P 01 ourheaderfile.h"
 
 int main() {
-    printf(".............................SOFTWARE OF PROGRAMS......................................\n");
-    int a, b, x, j, num,n,r,year,rows,cols,choice,option,o,q,total, rank,range,result;
+    printf(".............................SOFTWARE OF PROGRAMS......................................\nHello! I am IORONICA.\tPlease choose the available service to serve you\n");
+    int a, b, x, j, num,n,r,year,rows,cols,choice,option,o,q,total, rank,range,result,e;
     double total_candidates_below, total_candidates;
 
 #define MAX_ROWS 10
@@ -34,6 +32,7 @@ int main() {
         printf("15.Roman number to Integer and the Reverse\n");
         printf("16.Upto which number you want to find sum:\n");
         printf("17.Enter the year to check it is leap year or not\n");
+        printf("18.Palindrome number\n");
         printf("Choose the option:\n");
         scanf("%d", &choice);
         if (choice == 1) {
@@ -44,10 +43,10 @@ int main() {
             case 2:
                 printf("Enter number to check Armstrong numbers:\n");
                 scanf("%d", &x);
-                if (armstrong(num) == 0) {
-                    printf("%d is an armstrong number.\n", num);
+                if (isArmstrong(x) == 0) {
+                    printf("%d is an Armstrong number.\n", num);
                 } else {
-                    printf("%d is not an armstrong number.\n", num);
+                    printf("%d is not an Armstrong number.\n", num);
                 }
                 break;
             case 3:
@@ -289,13 +288,13 @@ int main() {
                         puts("sorry unavailable\n");
                         break;
                 }
-                case 16:
+            case 16:
                         printf("Upto which number you want to find sum:\n");
                         scanf("%d",&range);
                         result=addition(range);
                         printf("1+2+3+.....+%d+%d = %d\n",(range-1),range,result);
                         break;
-                case 17:
+            case 17:
                 printf("Enter the year:\n");
                 scanf("%d",&year);
                 if(Leapyear(year)){
@@ -305,8 +304,12 @@ int main() {
                 }
                 break;
             case 18:
-                printf("Enter the number to check amstrong number:\n");
-                scanf("%d",&a);
+                printf("Enter the palindrome number:");
+                scanf("%d",&e);
+                if(palindrome(e))
+                    printf("It's palindrome\n");
+                else
+                    printf("it's not palindrome\n");
                 break;
             default:
                 printf("Sorry unavailable.....\n");
@@ -314,3 +317,9 @@ int main() {
         }
     }
 }
+/*
+ * 18 no option is not working
+ * also 2 no
+ *
+ *
+ * */
