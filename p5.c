@@ -1,7 +1,9 @@
-//
-// Created by 12san on 29-06-2024.
-//
-//
+/*
+   1
+  321
+ 54321
+7654321
+*/
 // Created by 12san on 29-06-2024.
 //
 #include<stdio.h>

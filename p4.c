@@ -1,7 +1,10 @@
-//
-// Created by 12san on 29-06-2024.
-//
-//
+/*
+   1
+  333
+ 55555
+7777777
+
+*/
 // Created by 12san on 29-06-2024.
 //
 #include<stdio.h>

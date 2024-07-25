@@ -40,8 +40,8 @@ struct User{
 
 //function to display Menu
 
-void displayMenu(){
-    printf("....Welcome to Bus Reservation system....");
+void displayMainMenu(){
+    printf("....Welcome to Bus Reservation system....\n");
     printf("1. login\n");
     printf("2. exit\n");
     printf("Please choose the option:\n");
@@ -49,7 +49,7 @@ void displayMenu(){
 
 //function to display the user or Main menu
 
-void displayMainMenu(){
+void displayUserMenu(){
     printf("....Red Bus Main Menu....\n");
     printf("1. Book a Ticket\n");
     printf("2. cancel a Ticket\n");
@@ -59,7 +59,7 @@ void displayMainMenu(){
 }
 
 //function to perform user login
-int LoginUser(struct User users[],int numUsers,char username[],char password[]){
+int loginUser(struct User users[],int numUsers,char username[],char password[]){
     for(int i=0;i<numUsers;i++){
         if(strcmp(users[i].username,username)==0 && strcmp(users[i].password,password)==0){           //strcmp for string comparison
     return i;   //return the index of login user
@@ -90,12 +90,15 @@ void bookTicket(struct Bus buses[],int numBuses,struct Passenger passengers[],in
         printf("Sorry! the bus is fully booked.\n");
     }else{
         printf("Enter passenger name:\n");
-        scanf("%s",passengers[*numPassengers].name);
+        scanf("%s", passengers[*numPassengers].name);
         printf("Enter Passenger Age:\n");
         scanf("%d",&passengers[*numPassengers].age);
 
         //assign a seat(seatNumber) to the passenger
-        passengers[*numPassengers].seatNumber=buses[busIndex].availableSeats+1;  //here busIndex is -1 so -1+1=0 so one person fill a seat at 0 index update available index
+        passengers[*numPassengers].seatNumber=buses[busIndex].totalSeats-buses[busIndex].availableSeats+1;  //here busIndex is -1 so -1+1=0 so one person fill a seat at 0 index update available index
+
+//update the passengers's bus number
+passengers[*numPassengers].busNumber=busNumber;
 
         //update available seats
         buses[busIndex].availableSeats--;
@@ -105,18 +108,18 @@ void bookTicket(struct Bus buses[],int numBuses,struct Passenger passengers[],in
 }
 
 //function to cancel a ticket
-void cancelTicket(struct Bus buses[],struct Passenger passengers[],int numBuses,int userId,int* numPassengers){
+void cancelTicket(struct Bus buses[],int numBuses,struct Passenger passengers[],int* numPassengers,int userId){
     printf("Enter passenger name:\n");
     char name[50];
     scanf("%s",name);
     int found=0;
     for(int i=0;i<*numPassengers;i++){
-        if(strcmp(passengers[*numPassengers].name,name)==0 && passengers[*numPassengers].busNumber==buses[userId].busNumber){
+        if(strcmp(passengers[i].name,name)==0 && passengers[i].busNumber==buses[userId].busNumber){
 
             //increase available seats
             int busIndex=-1;
             for(int j=0;j<numBuses;j++){
-                if(buses[j].busNumber==passengers[j].busNumber){
+                if(buses[j].busNumber==passengers[i].busNumber){
                     busIndex=j;
                     break;
                 }
@@ -124,11 +127,37 @@ void cancelTicket(struct Bus buses[],struct Passenger passengers[],int numBuses,
             buses[busIndex].availableSeats++; //busIndex=-1 so current value is 0,  0+(-1)=-1
 
             //remove the passenger entry
-            for(int j=){
 
+            for(int j=i;j<(*numPassengers)-1;j++){
+                passengers[j]=passengers[j+1];
+                
             }
-
+(*numPassengers)--;
+found=1;
+printf("Ticket cancelled successfully!");
+break;
         }
-
+    }
+    if(!found){
+        printf("passenger with name %s not found on the bus\n",name);
     }
 }
+
+//function to check bus status
+
+void checkBusStatus(struct Bus buses[],int numBuses,int userId){
+
+    printf("\nBus number:%d\n",buses[userId].busNumber);
+    printf("Source:%s\n",buses[userId].Source);
+    printf("Destination:%s\n",buses[userId].destination);
+    printf("Total Seats:%d\n",buses[userId].totalSeats);
+    printf("Available seats:%d\n",buses[userId].availableSeats);
+    printf("Fare:%.2f\n",buses[userId].fare);
+}
+
+
+
+
+
+
+
