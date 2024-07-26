@@ -1,7 +1,9 @@
-//
-// Created by 12san on 29-06-2024.
-//
-//
+/*
+   A
+  ABC
+ ABCDE
+ABCDEFG
+*/
 // Created by 12san on 29-06-2024.
 //
 #include<stdio.h>
