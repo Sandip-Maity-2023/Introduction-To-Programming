@@ -1,29 +1,26 @@
 /*
    1
-  121
- 12321
-1234321
-
+  1 1
+ 1 2 1
+1 3 3 1
+1 4 6 4 1
 */
 //
-// Created by 12san on 29-06-2024.
+// Created by 12san on 29-06-2024.   //pascal's triangle
 //
 #include<stdio.h>
 
 int main(){
-    int n=4,m=(n/2 +1),nsp=n-1,nst;
+    int n=5; //odd
     for(int i=1;i<=n;i++){
-        for(int j=1;j<=nsp;j++){
+        for(int j=1;j<=n-i;j++){
             printf(" ");
         }
-        for(int k=1;k<=nst;k++){
-            printf("* ");
-        }
-        if(i<m){
-            nsp--;
-
+        int c=1;
+        for(int k=1;k<=i;k++){
+            printf("%d ",c);
+            c=c*(i-k)/k;
         }
         printf("\n");
     }
-    return 0;
 }
