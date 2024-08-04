@@ -17,6 +17,7 @@ int main(){
         scanf("%d",&array[i]);
     }
     printf("THE ELEMENTS OF THE ARRAY ARE:\n");
+
     for(int i=0;i<size;i++){
         printf("%d",array[i]);
     }
