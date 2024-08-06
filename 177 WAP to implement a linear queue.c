@@ -4,9 +4,11 @@
 
 #include<stdio.h>
 #define MAX 10
+
 int queue[MAX];
 int front=-1;
 int rear=-1;
+
 void insert(void);
 int delete(void);
 int peek(void);
@@ -31,13 +33,13 @@ int main() {
             case 2:
                 val=delete();
                 if(val !=-1){
-                    printf("\nThe number is deleted:%d",val);
-                    break;
+                    printf("\nThe number is deleted: %d\n",val);
                 }
+                break;
             case 3:
                 val=peek();
                 if(val !=-1)
-                    printf("The first value in the queue is %d",val);
+                    printf("The first value in the queue is %d\n",val);
                 break;
             case 4:
                 display();
@@ -52,9 +54,10 @@ int num;
 printf("Enter the number that to be inserted in the Queue:\n");
 scanf("%d",&num);
 if(rear==MAX-1){
-    printf("The Queue is underflow\n");
+    printf("The Queue is overflow\n");
 }else if(front==-1 && rear==-1){
     front=rear=0;
+    queue[rear]=num;
 }else{
     rear++;
     queue[rear]=num;
@@ -69,16 +72,21 @@ int delete(){
     }else{
         val=queue[front];
         front++;
-        if(front>rear){
-            front=rear=-1;
-            return val;
+        if(front>rear) {
+            front = rear = -1;
         }
+            return val;
     }
 }
 
-void display(){
-    for(int i=rear;i<=0;i++){
-        printf("%d\t",queue[i]);
+void display() {
+    if (front == -1) {
+        printf("The queue is empty\n");
+    } else {
+        for (int i = front; i <= rear; i++) {
+            printf("%d\t", queue[i]);
+        }
+        printf("\n");
     }
 }
 

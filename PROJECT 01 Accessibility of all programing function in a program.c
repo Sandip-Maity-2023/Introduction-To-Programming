@@ -15,25 +15,25 @@ int main() {
     char c, roman[10];
     float ru, p, sgpa, percentage, Sgpa[20];
     while (1) {
-        printf("1.exit\n");
-        printf("2.Armstrong number\n");
-        printf("3.calculation of two number\n");
-        printf("4.Sum of N numbers\n");
-        printf("5.Area of a circle\n");
-        printf("6.ASCII value\n");
-        printf("7.Currency converter into Dollars,Euros,Yen,Rubel.\n");
-        printf("8.Transpose of Matrix calculation\n");
-        printf("9.SGPA to CGPA\n");
-        printf("10.SGPA to Percentage and Reverse\n");
-        printf("11.Pattern\n");
-        printf("12.Rank to Percentile conversion\n");
-        printf("13.percentile to rank calculation\n");
-        printf("14.Information\n");
-        printf("15.Roman number to Integer and the Reverse\n");
-        printf("16.Upto which number you want to find sum:\n");
-        printf("17.Enter the year to check it is leap year or not\n");
-        printf("18.Palindrome number\n");
-        printf("Choose the option:\n");
+        printf("\n1.exit\t");
+        printf("2.Armstrong number\t");
+        printf("3.calculation of two number\t");
+        printf("4.Sum of N numbers\t");
+        printf("5.Area of a circle\t");
+        printf("6.ASCII value\t");
+        printf("7.Currency converter into Dollars,Euros,Yen,Rubel.\t");
+        printf("8.Transpose of Matrix calculation\t");
+        printf("9.SGPA to CGPA\t");
+        printf("10.SGPA to Percentage and Reverse\t");
+        printf("11.Pattern\t");
+        printf("12.Rank to Percentile conversion\t");
+        printf("13.percentile to rank calculation\t");
+        printf("14.Information\t");
+        printf("15.Roman number to Integer and the Reverse\t");
+        printf("16.Upto which number you want to find sum:\t");
+        printf("17.Enter the year to check it is leap year or not\t");
+        printf("18.Palindrome number\t");
+        printf("\n\nChoose the option:\n");
         scanf("%d", &choice);
         if (choice == 1) {
             printf("thank you for your time.");
@@ -318,7 +318,7 @@ int main() {
     }
 }
 /*
- * 18 no option is not working
+ * armstrong no option is not working
  * also 2 no
  *
  *
