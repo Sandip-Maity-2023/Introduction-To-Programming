@@ -41,7 +41,7 @@ struct User{
 //function to display Menu
 
 void displayMainMenu(){
-    printf("....Welcome to Bus Reservation system....\n");
+    printf("\n....Welcome to Bus Reservation system....\n");
     printf("1. login\n");
     printf("2. exit\n");
     printf("Please choose the option:\n");
@@ -50,9 +50,9 @@ void displayMainMenu(){
 //function to display the user or Main menu
 
 void displayUserMenu(){
-    printf("....Red Bus Main Menu....\n");
+    printf("\n....Red Bus Main Menu....\n");
     printf("1. Book a Ticket\n");
-    printf("2. cancel a Ticket\n");
+    printf("2. Cancel a Ticket\n");
     printf("3. Check Bus Status\n");
     printf("4. Logout\n");
     printf("Enter your choose from the given options:\n");
@@ -65,14 +65,15 @@ int loginUser(struct User users[],int numUsers,char username[],char password[]){
     return i;   //return the index of login user
 }
     }
-    return -1;
+    return -1; //in case of exception
 
 }
 
 //function to book a ticket
 
 void bookTicket(struct Bus buses[],int numBuses,struct Passenger passengers[],int* numPassengers,int userId){
-    printf("Enter Bus Number:\n");
+    printf("Enter Bus Number (Available: 101 [Barasat to Saltlake]; 102 [kolkata to New Delhi]; 103 [Mumbai to Bangalore] ):\n");
+
     int busNumber;
     scanf("%d",&busNumber);
 
@@ -87,7 +88,7 @@ void bookTicket(struct Bus buses[],int numBuses,struct Passenger passengers[],in
     if(busIndex==-1){
         printf("Bus with Bus number %d not found:\n",busNumber);
     }else if(buses[busIndex].availableSeats==0){
-        printf("Sorry! the bus is fully booked.\n");
+        printf("Sorry! The bus is fully booked.\n");
     }else{
         printf("Enter passenger name:\n");
         scanf("%s", passengers[*numPassengers].name);
@@ -97,7 +98,7 @@ void bookTicket(struct Bus buses[],int numBuses,struct Passenger passengers[],in
         //assign a seat(seatNumber) to the passenger
         passengers[*numPassengers].seatNumber=buses[busIndex].totalSeats-buses[busIndex].availableSeats+1;  //here busIndex is -1 so -1+1=0 so one person fill a seat at 0 index update available index
 
-//update the passengers's bus number
+//update the passenger's bus number
 passengers[*numPassengers].busNumber=busNumber;
 
         //update available seats

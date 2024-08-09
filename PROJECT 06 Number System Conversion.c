@@ -4,3 +4,6 @@
 
 #include "PROJECT 06 Number System Conversion.h"
 
+int main(){
+    int decimal;
+}

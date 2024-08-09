@@ -14,16 +14,15 @@ int main(){
 
     struct User users[5]={
         {"user1","password1"},{"user2","password2"},{"user3","password3"},{"user4","password4"},{"user5","password5"}
-
     };
     int numUsers=5;
 
     //initialize bus data
 
     struct Bus buses[3]={
-        {101,"city A","city B",50,50,25.0},
-        {102,"city B","city D",40,40,20.0},
-        {103,"city E","city F",30,30,15.0},
+        {101,"city Barasat","city Saltlake",50,50,25.0},
+        {102,"city Kolkata","city New Delhi",40,40,20.0},
+        {103,"city Mumbai","city Bangalore",30,30,15.0},
     };
 
     int numBuses=3;
