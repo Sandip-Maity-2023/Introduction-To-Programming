@@ -6,23 +6,28 @@
 //
 
 #include<stdio.h>
-int main(){
+
+int main() {
     int n;
     printf("Enter the size:\n");
-    scanf("%d",&n);
+    scanf("%d", &n);
 
     int arr[n];
 
-    printf("Enter the elements of array:\n");
-    for(int i=0;i<n;i++) {
-        printf("Enter number %d:\t", n);
+    printf("Enter the elements of the array:\n");
+    for(int i = 0; i < n; i++) {
+        printf("Enter number %d:\t", i + 1);
         scanf("%d", &arr[i]);
     }
-    int *min=&arr[0];
-    for(int i=0;i<n;i++){
-        if(arr[i]<min){
-            min=&arr[i];
+
+    int *min = &arr[0];
+    for(int i = 1; i < n; i++) {  // Start loop from 1 since min is initialized with arr[0]
+        if(arr[i] < *min) {
+            min = &arr[i];
         }
     }
-    printf("Address of the smallest value is :%d\n",min);
+
+    printf("Smallest value is %d and its address is: %p\n", *min, (void *)min);
+
+    return 0;
 }

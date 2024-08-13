@@ -27,7 +27,7 @@ int main(){
     }
     printf("The array after deletion:\n");
     for(int i=0;i<n-1;i++){
-        printf("\t%d",arr[i]);
+        printf("%d\t",arr[i]);
     }
     return 0;
 }

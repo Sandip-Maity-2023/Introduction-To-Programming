@@ -13,6 +13,7 @@ int main(){
 
     int arr[n];
 
+
     printf("Enter the elements of array:\n");
     for(int i=0;i<n;i++) {
         printf("Enter number %d:\t", n);
