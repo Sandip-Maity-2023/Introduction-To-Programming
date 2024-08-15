@@ -18,12 +18,18 @@ int main(){
     printf("Enter the element position to deleted element :");
     scanf("%d",&pos);
 
-    for(int i=pos;i<n-1;i++) {
-         arr[i] = arr[i + 1];
-         }
-    printf("The array after deletion:\n");
-    for(int i=0;i<n;i++){
-        printf("\t%d",arr[i]);
+    if(pos>=n+1){
+        printf("Deletion not possible\n");
+    }else {
+        for (int i = pos - 1; i < n - 1; i++) {
+            arr[i] = arr[i + 1];
+        }
+
+        printf("The array after deletion:\n");
+        for (int i = 0; i < n - 1; i++) {
+            printf("\t%d", arr[i]);
+        }
+        printf("\n");
     }
     return 0;
 }
