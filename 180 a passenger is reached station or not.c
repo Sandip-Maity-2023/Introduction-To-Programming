@@ -18,7 +18,7 @@ int main(){
     char stations[n][20]={
             "sealdah","dumdum","baranagar","Dhakshineswar","Madhamgram","barasat"
     };
-    char targetStation[]="dumdum";
+    char targetStation[]="barasat";
     int index= linearSearch(stations,targetStation);
 
     if(index!=0){

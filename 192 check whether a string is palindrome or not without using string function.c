@@ -10,7 +10,7 @@ int  isPalindrome(char s[]){
     }
     end--;
     while(start<end){
-        if(s[start] !=s[end]){
+        if(s[start] != s[end]){
             return 0;
         }
         start++;
