@@ -1,6 +1,3 @@
-//
-// Created by 12san on 25-08-2024.
-//
 #include<stdio.h>
 
 float gradeToPoint(char grade){
@@ -8,54 +5,52 @@ float gradeToPoint(char grade){
         case 'A':
         case 'a':
             return 10.0;
-            break;
         case 'B':
         case 'b':
             return 8.0;
-            break;
         case 'C':
         case 'c':
             return 6.0;
-            break;
         case 'D':
         case 'd':
             return 4.0;
-            break;
         case 'f':
         case 'F':
             return 0.0;
-            break;
         default:
             return -1.0;
     }
 }
 
 int main() {
-    int n, i;
+    const int n = 6; // Total number of subjects
+    float credits[] = {4.0, 4.0, 4.0, 4.0, 4.0, 2.0}; // Credits for each subject
+    char subjects[][50] = {
+            "Discrete Structure & Logic",
+            "Principles of Programming",
+            "Switching Circuits & Logic Design",
+            "Math-III",
+            "Data Structures & Algorithms (DSA)",
+            "Lab Subjects"
+    };
 
-    printf("Enter the number of subjects:\n");
-    scanf("%d", &n);
-
-    float credits[n];
     char grades[n];
-
     float totalCredits = 0, sum = 0;
-    for (i = 0; i < n; i++) {
-        printf("Enter the credit for subject %d:\t", i + 1);
-        scanf("%f", &credits[i]);
 
-        printf("Enter the grade(A/B/C/D/E/F) for subject %d:\t ", i + 1);
-        scanf("%c", &grades[i]);
+    for (int i = 0; i < n; i++) {
+        printf("Enter the grade (A/B/C/D/F) for %s:\t", subjects[i]);
+        scanf(" %c", &grades[i]);
 
         float gradepoint = gradeToPoint(grades[i]);
         if (gradepoint == -1.0) {
-            printf("Invalid Choice");
+            printf("Invalid grade entered for %s.\n", subjects[i]);
             return -1;
         }
         totalCredits += credits[i];
         sum += gradepoint * credits[i];
     }
-    float gpa=sum/totalCredits;
-    printf("Your GPA for the semester is:\t%.2f",gpa);
+
+    float gpa = sum / totalCredits;
+    printf("Your GPA for the semester is:\t%.2f\n", gpa);
     return 0;
 }
