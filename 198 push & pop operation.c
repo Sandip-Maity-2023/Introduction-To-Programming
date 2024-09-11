@@ -31,7 +31,7 @@ int main() {
             case 1:
                 val = pop(arr);
                 if (val != -1) {
-                    printf("The value is deleted from stack");
+                    printf("The value is deleted from stack\n");
                 }
                 break;
             case 3:
