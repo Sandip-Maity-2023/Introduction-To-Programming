@@ -2,7 +2,7 @@
 // Created by 12san on 10-02-2024.
 //
 #include<stdio.h>
-#include"PROJECT 01 Accessibility of all programing function in a program.h"
+#include"Project 01 Accessibility of all programing function in a program.h"
 
 int main() {
     printf(".............................SOFTWARE OF PROGRAMS......................................\nHello! I am IORONICA.\tPlease choose the available service to serve you\n");
@@ -36,7 +36,7 @@ int main() {
         printf("\n\nChoose the option:\n");
         scanf("%d", &choice);
         if (choice == 1) {
-            printf("thank you for your time.");
+            printf("Thank you for your time.");
             break;
         }
         switch (choice) {
@@ -53,7 +53,7 @@ int main() {
                 printf("Enter two number:\n");
                 scanf("%d %d", &a, &b);
                 printf("Addition is: %d\n", sum(a, b));
-                printf("Substraction is: %d\n", sum(a, b));
+                printf("Subtraction is: %d\n", sum(a, b));
                 printf("Multiplication is: %d\n", sum(a, b));
                 printf("Division is: %d\n", sum(a, b));
                 printf("Modulus is: %d\n", sum(a, b));

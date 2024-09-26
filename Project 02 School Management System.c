@@ -2,7 +2,7 @@
 //menu driven program for student
 //management system
 
-#include <math.h>
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
