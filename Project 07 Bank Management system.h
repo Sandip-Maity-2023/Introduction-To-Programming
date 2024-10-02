@@ -17,6 +17,8 @@ fp: This is a pointer to a FILE object, which represents the file to which the d
 #endif //INTRODUCTION_TO_PROGRAMMING_PROJECT_07_BANK_MANAGEMENT_SYSTEM_H
 
 #include<stdio.h>
+#include<stdlib.h>
+
 void check_balance(char*);
 void create_account();
 void created();
@@ -77,7 +79,7 @@ void create_account(){
     scanf("%d",new.username);
 
     printf("Password:\n");
-    /////////////////////////////////////start here
+    //passwordInput(password,20);
 new.balance=0.0;
                             //open file
     FILE *fp;
@@ -92,6 +94,22 @@ new.balance=0.0;
     fclose(fp);
 
     created();
+}
+
+//Function to mask the input for password
+void passwordInput(char* password,int max_length){
+    int i;
+    char ch;
+    for(i=0;i<max_length;i++){
+        if(ch!=13){
+            password[i]=ch;
+            printf("*");
+        }else{
+            password[i]='\0';
+            break;
+        }
+    }
+
 }
 
 void created(){
