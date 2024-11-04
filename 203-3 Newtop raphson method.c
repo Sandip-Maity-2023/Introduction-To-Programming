@@ -6,10 +6,12 @@
 #include<math.h>
 
 float f(float x){
-    return (pow(x,4)-x-10);
+   // return (pow(x,4)-x-10);
+   return (pow(x,3)-2*x-3);
 }
 float df(float x){
-    return(4*pow(x,3)-1);
+    //return(4*pow(x,3)-1);
+    return (3*pow(x,2)-2);
 }
 int main(){
 float x0,x1,err,err_t;
