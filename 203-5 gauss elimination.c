@@ -1,6 +1,4 @@
 #include<stdio.h>
-#include<conio.h>
-#include<math.h>
 #include<stdlib.h>
 
 #define   SIZE   10
@@ -61,6 +59,5 @@ int main()
     {
         printf("x[%d] = %0.3f\n",i, x[i]);
     }
-    getch();
     return(0);
 }

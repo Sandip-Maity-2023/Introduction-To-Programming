@@ -3,7 +3,7 @@
 //
 
 
-problems...................................
+//problems...................................
 #include<stdio.h>
 void sort(int n,int *a);
 int main() {
