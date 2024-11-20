@@ -13,7 +13,9 @@ int main(){
     h=(b-a)/n;
     sum+=f(a)+f(b);
     for(i=a+h;i<b;i=i+h){
-            sum+=2*f(i);
+
+
+               sum+=2*f(i);
     }
     sum=(h*sum)/2;
     printf("Value of integral: %f",sum);

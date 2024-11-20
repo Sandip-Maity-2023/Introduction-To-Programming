@@ -2,7 +2,8 @@
 // Created by 12san on 28-08-2024
 
 
-#include<stdio.h>
+#include<
+stdio.h>
 #include<math.h>
 
 float fun(float x){
