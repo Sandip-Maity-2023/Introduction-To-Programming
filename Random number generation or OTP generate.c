@@ -14,7 +14,7 @@ int main(){
     int random_number=100000+rand()%900000;
 
     //print the random number
-    printf("Random 6-digit number: %d\n",random_number);
+    printf("Random 6-digit number: %d\n",random_number%rand());
     int n;
 
     return 0;
