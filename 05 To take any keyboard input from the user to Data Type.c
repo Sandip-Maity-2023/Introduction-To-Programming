@@ -4,7 +4,7 @@ int main(){
 	printf("Enter something:");
 	scanf("%s",&userinput);
 	int intvalue;
-	if(sscanf(&userinput,"%d",&intvalue)){
+	if(scanf(&userinput,"%d",&intvalue)){
 	printf("DATA TYPE: INTEGER\n");
 } else{
 	printf("DATA TYPE: STRING\n");

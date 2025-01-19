@@ -16,7 +16,5 @@ int main() {
     
     l2=strlen(str2);
 
-
-
     return 0;
 }
