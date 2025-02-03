@@ -8,7 +8,7 @@ int tower(int n,char source,char destination,char intermediate){   //SDI
         return 0;
     }
     tower(n-1,source,intermediate,destination);  //SID
-    printf("Move disk %d from %c peg to ped %c\n",n,source,destination);
+    printf("Move disk %d from %c peg to peg %c\n",n,source,destination);
     tower(n-1,intermediate,destination,source);    //IDS
 }
 
