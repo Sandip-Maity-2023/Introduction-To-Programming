@@ -30,7 +30,7 @@ void inputGraph() {
 
 // Function to enqueue in BFS queue
 void enqueue(int value) {
-    if (rear == MAX - 1) return;
+    if (rear == MAX - 1) return; //0 to start so last -1
     if (front == -1) front = 0;
     queue[++rear] = value;
 }
@@ -69,7 +69,7 @@ void dfs(int start) {
     visited[start] = 1;
 
     for (int i = 0; i < n; i++) {
-        if (adj[start][i] == 1 && !visited[i]) {
+        if (adj[start][i] == 1 && !visited[i]) {  //!visited[i] (equivalent to visited[i] == 0)
             dfs(i);
         }
     }

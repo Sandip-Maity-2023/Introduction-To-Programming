@@ -18,3 +18,6 @@ int main(){
     scanf("%d",&n);
     tower(n,'S','D','I');
 }
+
+//time:
+//space:

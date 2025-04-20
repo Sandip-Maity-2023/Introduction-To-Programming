@@ -21,7 +21,7 @@ index++;
             j++;
             index++;
         }
-    }else{
+    }else{  //here i<=mid
         while(i<=mid){
             temp[index]=arr[i];
             i++;
